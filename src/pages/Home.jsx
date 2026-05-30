@@ -286,11 +286,16 @@ const Home = () => {
 
             {/* Image - Shows FIRST on mobile, SECOND on desktop */}
             <div className="relative h-72 sm:h-80 lg:h-96 xl:h-125 rounded-2xl lg:rounded-3xl overflow-hidden order-1 lg:order-2">
-              <img
-                src="/home.jpg"
-                alt="Fashion models"
-                className="w-full h-full object-cover object-top"
-              />
+              <picture>
+                <source srcSet="/home.avif" type="image/avif" />
+                <img
+                  src="/home.jpg"
+                  alt="Fashion models"
+                  className="w-full h-full object-cover object-top"
+                  width="1200"
+                  height="1800"
+                />
+              </picture>
             </div>
           </div>
         </div>
